@@ -104,6 +104,10 @@ def deliver_cost():
     total = calculate_cost(order)
     return jsonify({"total_cost": round(total)})
 
+@app.route('/', methods=['GET'])
+def test():
+    return "HELLO! Use POST api and send input in json"
+
 if __name__ == '__main__':
     app.run(debug=True)
 
